@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="english" value="">
+<input type="text" id="vietnamese" value="">
+<button onclick="translateA()">Translate</button>
+<script>
+    let ENGLISH = ["Human", "Circus", "Bike", "Dog", "Cat", "Chicken", "Bird"];
+    let VIETNAMESE = ["Con người", "Rạp xiếc", "Xe đạp", "Chó", "Mèo", "Gà", "Chim"];
+
+    function translateA() {
+        let str = document.getElementById('english').value;
+        let a = -1;
+        for (let x = 0; x < ENGLISH.length; x++) {
+            if (ENGLISH[x] === str) {
+                a = x;
+            }
+        }
+        if (a !== -1) {
+            document.getElementById('vietnamese').value = VIETNAMESE[a];
+        } else {
+            alert('Không dịch được');
+        }
+    }
+
+</script>
+</body>
+</html>
